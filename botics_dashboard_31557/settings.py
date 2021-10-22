@@ -17,7 +17,7 @@ from modules.manifest import get_modules
 
 env = environ.Env()
 
-# SECURITY WARNING: don't run with debug turned on in production!
+#SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -111,6 +111,8 @@ DATABASES = {
     }
 }
 
+
+
 if env.str("DATABASE_URL", default=None):
     DATABASES = {
         'default': env.db()
@@ -196,7 +198,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 
-# AWS S3 config
+#AWS S3 config
 AWS_ACCESS_KEY_ID = env.str("AWS_ACCESS_KEY_ID", "")
 AWS_SECRET_ACCESS_KEY = env.str("AWS_SECRET_ACCESS_KEY", "")
 AWS_STORAGE_BUCKET_NAME = env.str("AWS_STORAGE_BUCKET_NAME", "")
